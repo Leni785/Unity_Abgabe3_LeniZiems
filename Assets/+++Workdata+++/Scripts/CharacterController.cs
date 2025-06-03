@@ -3,6 +3,11 @@ using UnityEngine.InputSystem;
 
 public class CharacterController : MonoBehaviour
 {
+    [SerializeField] GameObject MenuPanel;
+    [SerializeField] GameObject StartPanel;
+    [SerializeField] GameObject LostPanel;
+    [SerializeField] GameObject WinPanel;
+    
     private float direction = 0f;
     [SerializeField] private float speed = 2f;
     [SerializeField] private float jumpforce = 10f;
@@ -23,13 +28,12 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        canMove = true;
     }
 
 
     void Update()
     {
+        canMove = !MenuPanel.activeSelf && StartPanel.activeSelf && !LostPanel.activeSelf || StartPanel.activeSelf && !LostPanel.activeSelf;
         if (canMove)
         {
             direction = 0;
@@ -73,7 +77,13 @@ public class CharacterController : MonoBehaviour
         }
         else if (other.CompareTag("obstacle"))
         {
-            uiManager.ShowPanelLost();
+            uiManager.ShowLostPanel();
+            canMove = false;
+        }
+        
+        else if (other.CompareTag("goal"))
+        {
+            uiManager.ShowWinPanel();
             canMove = false;
         }
     }
