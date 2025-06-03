@@ -1748,7 +1748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textCoinCount: {fileID: 272625218}
-  PanelLost: {fileID: 425928678}
+  LostPanel: {fileID: 425928678}
+  WinPanel: {fileID: 1026485825}
   buttonRestartGame: {fileID: 1924819171}
 --- !u!224 &1558953321
 RectTransform:

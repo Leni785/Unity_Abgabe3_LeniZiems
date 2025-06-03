@@ -7,13 +7,15 @@ public class UIManager : MonoBehaviour
 {
   [SerializeField] TextMeshProUGUI textCoinCount;
       
-      [SerializeField] GameObject PanelLost;
+      [SerializeField] GameObject LostPanel;
+      [SerializeField] GameObject WinPanel;
       
       [SerializeField] Button buttonRestartGame;
       
       private void Start()
       {
-          PanelLost.SetActive(false);
+          LostPanel.SetActive(false);
+          WinPanel.SetActive(false);
           buttonRestartGame.onClick.AddListener(RestartGame);
       }
   
@@ -30,6 +32,6 @@ public class UIManager : MonoBehaviour
   
       public void ShowPanelLost()
       {
-          PanelLost.SetActive(true);
+          LostPanel.SetActive(true);
       }
 }
