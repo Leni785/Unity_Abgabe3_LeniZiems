@@ -19,7 +19,6 @@ public class UIManager : MonoBehaviour
   
       void RestartGame()
       {
-          // gerade aktive Scene neu laden
           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
       }
       
