@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float jumpforce = 10f;
 
 
+
     private Rigidbody2D rb;
 
     [Header("Ground Check")] [SerializeField]
@@ -52,6 +53,7 @@ public class CharacterController : MonoBehaviour
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 Jump();
+
             }
 
             rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);

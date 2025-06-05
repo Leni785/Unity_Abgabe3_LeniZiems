@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 47de901a10aa5f94191a5aca3fa2a73b
+guid: cb4b3a28f9df26548833db63d8935d59
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6391052613586469663
-    second: frog_landing_0
+      213: 799565622138196329
+    second: frog_preparingtojump_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frog_landing_0
+      name: frog_preparingtojump_0
       rect:
         serializedVersion: 2
         x: 4
-        y: 9
-        width: 21
-        height: 17
+        y: 7
+        width: 22
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ecb85a528b6e47a0800000000000000
-      internalID: -6391052613586469663
+      spriteID: 961592272b0a81b00800000000000000
+      internalID: 799565622138196329
       vertices: []
       indices: 
       edges: []
@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      frog_preparingtojump_0: 799565622138196329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

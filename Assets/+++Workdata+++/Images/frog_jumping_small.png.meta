@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 838c9ae75fd926f4d94b45386f987a35
+guid: c333f0ffcecca824aa81633183abb491
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7898536696298556692
-    second: goalpng_0
+      213: 1009011185111663503
+    second: frog_jumping_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: goalpng_0
+      name: frog_jumping_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 2
-        width: 51
-        height: 25
+        x: 1
+        y: 7
+        width: 29
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41d434ce64d3d9d60800000000000000
-      internalID: 7898536696298556692
+      spriteID: f830afea35ab00e00800000000000000
+      internalID: 1009011185111663503
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      goalpng_0: 7898536696298556692
+      frog_jumping_0: 1009011185111663503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
