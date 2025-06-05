@@ -12,7 +12,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float speed = 2f;
     [SerializeField] private float jumpforce = 10f;
 
-
+    private Animator anim;
 
     private Rigidbody2D rb;
 
@@ -29,6 +29,7 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -43,17 +44,18 @@ public class CharacterController : MonoBehaviour
             if (Keyboard.current.aKey.isPressed)
             {
                 direction = -1;
+                anim.SetTrigger("Run");
             }
 
             if (Keyboard.current.dKey.isPressed)
             {
                 direction = 1;
+                anim.SetTrigger("Run");
             }
 
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 Jump();
-
             }
 
             rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
@@ -65,8 +67,11 @@ public class CharacterController : MonoBehaviour
         if (Physics2D.OverlapCircle(transformGroundCheck.position, 0.3f, layerGround))
         {
             rb.linearVelocity = new Vector2(0, jumpforce);
+            anim.SetTrigger("Jump");
         }
     }
+    
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
