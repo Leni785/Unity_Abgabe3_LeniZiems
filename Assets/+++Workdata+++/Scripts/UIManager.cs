@@ -24,6 +24,8 @@ public class UIManager : MonoBehaviour
       
       [Header("Movement")] [SerializeField] private CharacterController characterController;
       [Header("Timer")] [SerializeField] private Timer_TimeToWin timerTime;
+      [SerializeField] TextMeshProUGUI textTimer;
+      
 
       
       private void Start()
@@ -82,5 +84,7 @@ public class UIManager : MonoBehaviour
       public void ShowWinPanel()
       {
           WinPanel.SetActive(true);
+          Destroy(textTimer.gameObject);
       }
+      
 }
