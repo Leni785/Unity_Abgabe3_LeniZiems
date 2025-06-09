@@ -24,6 +24,9 @@ public class CharacterController : MonoBehaviour
     [Header("Manager")] [SerializeField] private CoinManager coinManager;
     [SerializeField] private UIManager uiManager;
     
+    [Header("Audio")]
+    [SerializeField] private AudioSource JumpSound;
+    
 
     private bool canMove = true;
 
@@ -57,6 +60,7 @@ public class CharacterController : MonoBehaviour
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 Jump();
+                JumpSound.Play();
             }
 
             rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
