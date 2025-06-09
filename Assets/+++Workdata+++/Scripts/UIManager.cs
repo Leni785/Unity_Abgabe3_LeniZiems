@@ -2,18 +2,29 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
   [SerializeField] TextMeshProUGUI textCoinCount;
       
+      [Header("Panels")]   
       [SerializeField] GameObject MenuPanel;
       [SerializeField] GameObject StartPanel;
       [SerializeField] GameObject LostPanel;
       [SerializeField] GameObject WinPanel;
       
+      [Header("Buttons")] 
       [SerializeField] Button buttonStartGame;
       [SerializeField] Button buttonRestartGame;
+      
+      [Header("Countdown")] 
+      [SerializeField] TextMeshProUGUI textCountdown;
+      [SerializeField] int TimeCounter = 3;
+      
+      [Header("Movement")] [SerializeField] private CharacterController characterController;
+      [Header("Timer")] [SerializeField] private Timer_TimeToWin timerTime;
+
       
       private void Start()
       {
@@ -21,6 +32,8 @@ public class UIManager : MonoBehaviour
           StartPanel.SetActive(false);
           LostPanel.SetActive(false);
           WinPanel.SetActive(false);
+          
+          characterController.enabled = false;
           
           buttonStartGame.onClick.AddListener(StartGame);
           buttonRestartGame.onClick.AddListener(RestartGame);
@@ -31,7 +44,24 @@ public class UIManager : MonoBehaviour
       {
           MenuPanel.SetActive(false);
           StartPanel.SetActive(true);
+          StartCoroutine(AfterOneSecond());
       }
+      
+      IEnumerator AfterOneSecond()
+      {
+          while(TimeCounter > 0)
+          {
+              TimeCounter--;
+              textCountdown.text = TimeCounter.ToString();
+              yield return new WaitForSeconds(1f);
+          }
+        
+          textCountdown.text = "0";
+          Destroy(textCountdown.gameObject);
+          characterController.enabled = true;
+          timerTime.StartTimer();
+      }
+      
       
       void RestartGame()
       {

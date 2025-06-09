@@ -1,14 +1,15 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
-public class Timer : MonoBehaviour
+public class Timer_TimeToWin : MonoBehaviour
 { 
     [SerializeField] TextMeshProUGUI textTimer;
-    [SerializeField] int TimeCounter = 10;
+    [SerializeField] int TimeCounter = 100;
     
     [SerializeField] GameObject LostPanel;
+    [SerializeField] private UIManager uiManager;
     
-    void Start()
+    public void StartTimer()
     {
         StartCoroutine(AfterOneSecond());
     }

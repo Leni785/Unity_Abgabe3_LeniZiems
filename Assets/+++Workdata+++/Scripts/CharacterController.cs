@@ -23,6 +23,7 @@ public class CharacterController : MonoBehaviour
 
     [Header("Manager")] [SerializeField] private CoinManager coinManager;
     [SerializeField] private UIManager uiManager;
+    
 
     private bool canMove = true;
 
@@ -33,7 +34,7 @@ public class CharacterController : MonoBehaviour
     }
 
 
-    void Update()
+    public void Update()
     {
         canMove = !MenuPanel.activeSelf && StartPanel.activeSelf && !LostPanel.activeSelf || StartPanel.activeSelf && !LostPanel.activeSelf;
         if (canMove)
