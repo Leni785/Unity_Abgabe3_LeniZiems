@@ -26,6 +26,10 @@ public class CharacterController : MonoBehaviour
     
     [Header("Audio")]
     [SerializeField] private AudioSource JumpSound;
+    [SerializeField] private AudioSource CoinSound;
+    [SerializeField] private AudioSource DeadSound;
+    [SerializeField] private AudioSource WinSound;
+    
     
 
     private bool canMove = true;
@@ -86,17 +90,20 @@ public class CharacterController : MonoBehaviour
         {
             coinManager.AddCoin();
             Destroy(other.gameObject);
+            CoinSound.Play();
         }
         else if (other.CompareTag("obstacle"))
         {
             uiManager.ShowLostPanel();
             canMove = false;
+            DeadSound.Play();
         }
         
         else if (other.CompareTag("goal"))
         {
             uiManager.ShowWinPanel();
             canMove = false;
+            WinSound.Play();
         }
     }
 }
