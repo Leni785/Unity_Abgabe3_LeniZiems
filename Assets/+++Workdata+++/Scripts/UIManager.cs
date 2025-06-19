@@ -8,7 +8,10 @@ public class UIManager : MonoBehaviour
 {
   [SerializeField] TextMeshProUGUI textFlyCount;
   [SerializeField] TextMeshProUGUI textGoldenFlyCount;
-      
+  
+  [SerializeField] TextMeshProUGUI WintextFlyCount;
+  [SerializeField] TextMeshProUGUI WintextGoldenFlyCount;
+  
       [Header("Panels")]   
       [SerializeField] GameObject MenuPanel;
       [SerializeField] GameObject StartPanel;
@@ -75,11 +78,14 @@ public class UIManager : MonoBehaviour
       public void UpdateTextCoinCount(int newCount)
       {
           textFlyCount.text = newCount.ToString();
+          WintextFlyCount.text = newCount.ToString();
       }
       
       public void UpdateTextDiamondCount(int newCount)
       {
           textGoldenFlyCount.text = newCount.ToString();
+          WintextGoldenFlyCount.text = newCount.ToString();
+          
       }
   
       public void ShowLostPanel()

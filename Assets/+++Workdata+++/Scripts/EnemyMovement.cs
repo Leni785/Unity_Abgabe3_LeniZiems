@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-    float moveDistance = 5f;
+    float moveDistance = 2f;
     float speed = 2f;
 
     private Vector3 startPos;
