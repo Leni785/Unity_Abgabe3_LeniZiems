@@ -6,7 +6,8 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
-  [SerializeField] TextMeshProUGUI textCoinCount;
+  [SerializeField] TextMeshProUGUI textFlyCount;
+  [SerializeField] TextMeshProUGUI textGoldenFlyCount;
       
       [Header("Panels")]   
       [SerializeField] GameObject MenuPanel;
@@ -73,7 +74,12 @@ public class UIManager : MonoBehaviour
       
       public void UpdateTextCoinCount(int newCount)
       {
-          textCoinCount.text = newCount.ToString();
+          textFlyCount.text = newCount.ToString();
+      }
+      
+      public void UpdateTextDiamondCount(int newCount)
+      {
+          textGoldenFlyCount.text = newCount.ToString();
       }
   
       public void ShowLostPanel()
@@ -85,6 +91,7 @@ public class UIManager : MonoBehaviour
       {
           WinPanel.SetActive(true);
           Destroy(textTimer.gameObject);
+          characterController.enabled = false;
       }
       
 }

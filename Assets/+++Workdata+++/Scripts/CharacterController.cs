@@ -92,6 +92,14 @@ public class CharacterController : MonoBehaviour
             Destroy(other.gameObject);
             CoinSound.Play();
         }
+        
+        if (other.CompareTag("diamond"))
+        {
+            coinManager.AddDiamond();
+            Destroy(other.gameObject);
+            CoinSound.Play();
+        }
+        
         else if (other.CompareTag("obstacle"))
         {
             uiManager.ShowLostPanel();
