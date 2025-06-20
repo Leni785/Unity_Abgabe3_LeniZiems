@@ -97,7 +97,6 @@ public class UIManager : MonoBehaviour
       {
           WinPanel.SetActive(true);
           Destroy(textTimer.gameObject);
-          characterController.enabled = false;
       }
       
 }

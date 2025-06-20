@@ -924,7 +924,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: '30
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 62e8a4ab0b3845740a97dc85667f4247, type: 2}
   m_sharedMaterial: {fileID: -1061412080367451748, guid: 62e8a4ab0b3845740a97dc85667f4247, type: 2}
@@ -2451,7 +2453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9150943, g: 0.13381095, b: 0.13381095, a: 0.49803922}
+  m_Color: {r: 0.9150943, g: 0.13381095, b: 0.13381095, a: 0.84313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4512,7 +4514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08728744, g: 1, b: 0.0141509175, a: 0.49803922}
+  m_Color: {r: 0.08728744, g: 1, b: 0.0141509175, a: 0.94509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5312,7 +5314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTimer: {fileID: 269584134}
-  TimeCounter: 100
+  TimeCounter: 30
   LostPanel: {fileID: 425928678}
   uiManager: {fileID: 1558953320}
 --- !u!4 &1287432688
@@ -7912,7 +7914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
+  m_Color: {r: 0.11293351, g: 0.6603774, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
