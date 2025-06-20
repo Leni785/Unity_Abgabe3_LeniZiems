@@ -15,8 +15,5 @@ Coin Sound Effect:
 https://pixabay.com/sound-effects/coin-collect-retro-8-bit-sound-effect-145251/
 
 Jump Sound Effect:
-<<<<<<< HEAD
 https://pixabay.com/sound-effects/retro-jump-3-236683/
-=======
-https://pixabay.com/sound-effects/retro-jump-3-236683/
->>>>>>> fc654ea8894da3c1ee607dddf8e7f99570476e54
+
